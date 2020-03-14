@@ -1,27 +1,34 @@
-import axios from 'axios';
+import axios from "axios";
 let baseURL;
 
-console.log('client ')
+console.log("client ");
 
-process.env.NODE_ENV === 'production'
-  //? (baseURL = 'here should be your production endpoint')
-  ? (baseURL = 'https://ironplate.herokuapp.com')
-  : (baseURL = 'http://localhost:5000');
+process.env.NODE_ENV === "production"
+  ? //? (baseURL = 'here should be your production endpoint')
+    (baseURL = "https://app-final-glinska.herokuapp.com")
+  : (baseURL = "http://localhost:5000");
 
 const service = axios.create({ withCredentials: true, baseURL });
 
 const actions = {
   isLoggedIn: async () => {
-    return await service.get('/is-logged-in');
+    return await service.get("/is-logged-in");
   },
-  signUp: async (user) => {
-    return await service.post('/signup', user);
+  signUp: async user => {
+    return await service.post("/signup", user);
   },
-  logIn: async (user) => {
-    return await service.post('/login', user);
+  logIn: async user => {
+    return await service.post("/login", user);
   },
   logOut: async () => {
-    return await service.get('/logout');
+    return await service.get("/logout");
+  },
+  //creating new axios request to a backend
+  createItem: async item => {
+    return await service.post("/createItem", item);
+  },
+  showItem: async () => {
+    return await service.get("/showItem");
   }
 };
 
