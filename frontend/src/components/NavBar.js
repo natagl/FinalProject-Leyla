@@ -11,7 +11,7 @@ function NavBar(props) {
 
       {props.email ? (
         <>
-          <NavLink onClick={this.logOut} to="/">
+          <NavLink onClick={props.logOut} to="/">
             Log Out |
           </NavLink>
           <NavLink to="/profile">Profile|</NavLink>
