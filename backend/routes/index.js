@@ -26,4 +26,5 @@ router.post("/image/create", (req, res, next) => {
     .catch(err => res.json(err));
 });
 
+//Exporting Router
 module.exports = router;
