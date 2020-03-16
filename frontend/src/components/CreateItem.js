@@ -15,6 +15,10 @@ const Sizes = [
 
 class CreateItem extends Component {
   state = {
+    title: "",
+    description: "",
+    size: "",
+    imageUrl: "",
     allImages: []
   };
 
@@ -70,6 +74,9 @@ class CreateItem extends Component {
       .saveNewThing(this.state)
       .then(res => {
         console.log("added: ", res);
+        let copyOfAllImages = [...this.state.allImages];
+        copyOfAllImages.unshift(res);
+        this.setState({ allImages: copyOfAllImages });
         // here you would redirect to some other page
       })
       .catch(err => {
@@ -120,7 +127,9 @@ class CreateItem extends Component {
             Submit
           </Button>
         </Form>
-        <h1>List of Img</h1>
+
+        <h1>List of Images I have saved</h1>
+
         {this.showImages()}
       </div>
     );

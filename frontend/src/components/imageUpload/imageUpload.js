@@ -1,15 +1,14 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 
-class imageUpload extends Component {
- 
+// class imageUpload extends Component {
 
-  render() {
-    return (
-      <div>
-        <h1>Image Upload</h1>
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <div>
+//         <h1>Image Upload</h1>
+//       </div>
+//     );
+//   }
+// }
 
-export default imageUpload;
+// export default imageUpload;

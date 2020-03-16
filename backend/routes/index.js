@@ -26,7 +26,7 @@ router.post("/image/create", (req, res, next) => {
     .catch(err => res.json(err));
 });
 
-router.post("/all-images", (req, res, next) => {
+router.get("/all-images", (req, res, next) => {
   Item.find()
     .then(allImagesFromMyDatabase => {
       res.json({ allImagesFromMyDatabase });

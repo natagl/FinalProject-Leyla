@@ -11,7 +11,7 @@ import ShowItem from "./components/ShowItem";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ImageUpload from "./components/imageUpload/imageUpload";
+// import ImageUpload from "./components/imageUpload/imageUpload";
 
 class App extends Component {
   state = {};
@@ -32,7 +32,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <NavBar email={this.state.email} />
+        <NavBar email={this.state.email} logOut={this.logOut} />
         {this.state.email}
         {/* <CreateItem /> */}
         <Switch>
@@ -57,11 +57,11 @@ class App extends Component {
             path="/show-items"
             render={props => <ShowItem {...props} user={this.state} />}
           />
-          <Route
+          {/* <Route
             exact
             path="/upload-items"
             render={props => <ImageUpload {...props} user={this.state} />}
-          />
+          /> */}
 
           <Route component={NotFound} />
         </Switch>
