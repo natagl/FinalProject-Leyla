@@ -43,6 +43,10 @@ const actions = {
       .post("/image/create", image)
       .then(res => res.data)
       .catch(err => console.error(err));
+  },
+
+  getAllImages: async () => {
+    return await service.get("/all-image");
   }
 };
 

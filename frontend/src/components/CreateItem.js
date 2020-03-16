@@ -6,7 +6,7 @@ const { Title } = Typography;
 const { TextArea } = Input;
 
 const Sizes = [
-  { key: 1, value: "Extar Small" },
+  { key: 1, value: "Extra Small" },
   { key: 2, value: "Small" },
   { key: 3, value: "Medium" },
   { key: 4, value: "Large" },
@@ -14,6 +14,23 @@ const Sizes = [
 ];
 
 class CreateItem extends Component {
+  state = {
+    allImages: []
+  };
+
+  componentDidMount() {
+    //page loads and Iwant to grab all img from DB
+    actions.getAllImages().then(allImages => {
+      this.setState({ allImages: allImages.data.allImagesFromMyDatabase });
+    });
+  }
+
+  showImages = () => {
+    return this.state.allImages.map(eachImage => {
+      return <img src={eachImage.imageUrl} />;
+    });
+  };
+
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   handleSubmit = async e => {
@@ -103,6 +120,8 @@ class CreateItem extends Component {
             Submit
           </Button>
         </Form>
+        <h1>List of Img</h1>
+        {this.showImages()}
       </div>
     );
   }
