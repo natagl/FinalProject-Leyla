@@ -2,7 +2,10 @@ const { Schema, model } = require("mongoose");
 
 const itemSchema = new Schema(
   {
-    title: String
+    imageUrl: String,
+    title: String,
+    description: String,
+    size: Number
   },
   {
     timestamps: true,

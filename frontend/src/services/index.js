@@ -29,6 +29,20 @@ const actions = {
   },
   showItem: async () => {
     return await service.get("/showItem");
+  },
+  handleUpload: theFile => {
+    //The one that saves to cloudinary
+    return service
+      .post("/upload", theFile)
+      .then(res => res.data)
+      .catch(err => console.error(err));
+  },
+  saveNewThing: image => {
+    //The one that saves to my DB
+    return service
+      .post("/image/create", image)
+      .then(res => res.data)
+      .catch(err => console.error(err));
   }
 };
 

@@ -11,6 +11,7 @@ import ShowItem from "./components/ShowItem";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ImageUpload from "./components/imageUpload/imageUpload";
 
 class App extends Component {
   state = {};
@@ -33,8 +34,7 @@ class App extends Component {
       <BrowserRouter>
         <NavBar email={this.state.email} />
         {this.state.email}
-
-        <CreateItem />
+        {/* <CreateItem /> */}
         <Switch>
           <Route exact path="/" render={props => <Home {...props} />} />
           <Route
@@ -55,17 +55,18 @@ class App extends Component {
           <Route
             exact
             path="/show-items"
-            render={props => <Profile {...props} user={this.state} />}
+            render={props => <ShowItem {...props} user={this.state} />}
           />
           <Route
             exact
             path="/upload-items"
-            render={props => <Profile {...props} user={this.state} />}
+            render={props => <ImageUpload {...props} user={this.state} />}
           />
 
           <Route component={NotFound} />
         </Switch>
-        <ShowItem />
+
+        {/* <ShowItem /> */}
         <Footer />
       </BrowserRouter>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import actions from "../services/index";
+import CreateItem from "./CreateItem";
 
 class ShowItem extends Component {
   state = {
@@ -18,12 +19,25 @@ class ShowItem extends Component {
 
   displayItems = () => {
     return this.state.itemArr.map((eachItem, index) => {
-      return <div key={index}>{eachItem.title}</div>;
+      return (
+        <div key={index}>
+          {eachItem.title}
+          <ul key={index}>{eachItem.description}</ul>
+          <ul key={index}>{eachItem.type}</ul>
+          <ul key={index}>{eachItem.size}</ul>
+          <ul key={index}>{eachItem.img}</ul>
+        </div>
+      );
     });
   };
 
   render() {
-    return <div>{this.state.ready ? this.displayItems() : ""}</div>;
+    return (
+      <div>
+        <CreateItem />
+        {this.state.ready ? this.displayItems() : ""}
+      </div>
+    );
   }
 }
 

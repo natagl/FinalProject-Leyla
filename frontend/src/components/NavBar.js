@@ -1,13 +1,12 @@
 import React from "react";
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
+import { Menu } from "antd/lib";
 
 function NavBar(props) {
   return (
     <nav className="menu">
       <NavLink to="/">Home |</NavLink>
-      <NavLink to="/show-items">Show Items|</NavLink>
-      <NavLink to="/upload-items">Upload Items|</NavLink>
 
       {props.email ? (
         <>
@@ -15,6 +14,8 @@ function NavBar(props) {
             Log Out |
           </NavLink>
           <NavLink to="/profile">Profile|</NavLink>
+          {/* <NavLink to="/upload-items">Upload Items|</NavLink> */}
+          <NavLink to="/show-items">Upload Items|</NavLink>
         </>
       ) : (
         <>
