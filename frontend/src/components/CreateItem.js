@@ -48,8 +48,12 @@ class CreateItem extends Component {
 
   // const [SizeValue, setSizeValue] = useState(1);
 
-  onSizeSelectChange = e => this.setState({ [e.target.name]: e.target.value });
-
+  onSizeSelectChange = e => {
+    console.log(e.target.name, e.target.value);
+    let value = Sizes[e.target.value - 1].value;
+    console.log(value);
+    this.setState({ size: value });
+  };
   handleSubmit = async e => {
     e.preventDefault();
     try {
@@ -132,7 +136,7 @@ class CreateItem extends Component {
           <Input name="size" type="string" />
           <select onChange={this.onSizeSelectChange}>
             {Sizes.map(item => (
-              <option key={item.key} value={item.key}>
+              <option name={item.value} key={item.key} value={item.key}>
                 {item.value}
               </option>
             ))}
@@ -158,9 +162,9 @@ class CreateItem extends Component {
           </Button>
         </Form>
 
-        {/* <h1>List of Images I have saved</h1>
+        <h1>List of Images I have saved</h1>
 
-        {this.showImages()} */}
+        {this.showImages()}
       </div>
     );
   }
