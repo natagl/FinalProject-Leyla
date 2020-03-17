@@ -25,25 +25,6 @@ class CreateItem extends Component {
     allImages: [] //initiali populated from DB
   };
 
-  componentDidMount() {
-    //page loads and Iwant to grab all img from DB
-    actions.getAllImages().then(allImages => {
-      this.setState({ allImages: allImages.data.allImagesFromMyDatabase });
-    });
-  }
-
-  showImages = () => {
-    return this.state.allImages.map((eachImage, index) => {
-      return (
-        <img
-          key={index}
-          src={eachImage.imageUrl}
-          style={{ minWidth: "350px", width: "350px", height: "300px" }}
-        />
-      );
-    });
-  };
-
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   // const [SizeValue, setSizeValue] = useState(1);
@@ -108,7 +89,6 @@ class CreateItem extends Component {
 
   render() {
     return (
-      // <div> <h1>Image Upload</h1></div>
       <div className="" style={{ maxWidth: "700px", margin: "2rem auto" }}>
         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
           <Title level={2}> Upload Items</Title>
@@ -146,14 +126,6 @@ class CreateItem extends Component {
           <Input
             type="file"
             onChange={e => this.handleFileUpload(e)}
-            // style={{
-            //   width: "300px",
-            //   height: "240px",
-            //   border: "1px solid lightgray",
-            //   display: "flex",
-            //   alignItems: "center",
-            //   justifyContent: "center"
-            // }}
           ></Input>
           <br />
           <br />
@@ -162,9 +134,9 @@ class CreateItem extends Component {
           </Button>
         </Form>
 
-        <h1>List of Images I have saved</h1>
+        {/* <h1>List of Images I have saved</h1>
 
-        {this.showImages()}
+        {this.showImages()} */}
       </div>
     );
   }
