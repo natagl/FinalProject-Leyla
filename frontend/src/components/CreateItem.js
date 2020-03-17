@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import actions from "../services/index";
 import { Typography, Button, Form, Input } from "antd";
+// import { Icon } from "react-icons-kit";
+// import { plusCircle } from "react-icons-kit/fa/plusCircle";
 
 const { Title } = Typography;
 const { TextArea } = Input;
@@ -19,7 +21,7 @@ class CreateItem extends Component {
     description: "",
     size: "",
     imageUrl: "",
-    allImages: []
+    allImages: [] //initiali populated from DB
   };
 
   componentDidMount() {
@@ -30,8 +32,14 @@ class CreateItem extends Component {
   }
 
   showImages = () => {
-    return this.state.allImages.map(eachImage => {
-      return <img src={eachImage.imageUrl} />;
+    return this.state.allImages.map((eachImage, index) => {
+      return (
+        <img
+          key={index}
+          src={eachImage.imageUrl}
+          style={{ minWidth: "350px", width: "350px", height: "300px" }}
+        />
+      );
     });
   };
 
@@ -41,6 +49,11 @@ class CreateItem extends Component {
     e.preventDefault();
     try {
       let item = await actions.createItem(this.state);
+      let allImagesCopy = [...this.state.allImages];
+      allImagesCopy.push(this.state.imageUrl);
+      this.setState({
+        allImages: allImagesCopy
+      });
       console.log(item);
     } catch (err) {
       console.log("*****", err);
@@ -58,7 +71,7 @@ class CreateItem extends Component {
     actions // where we will go to cloudinary to save our pic
       .handleUpload(uploadData)
       .then(response => {
-        // console.log('response is: ', response);
+        console.log("response is: ", response);
         // after the console.log we can see that response carries 'secure_url' which we can use to update the state
         this.setState({ imageUrl: response.secure_url }); //this is the url we got back from cloudinary
       })
@@ -66,22 +79,22 @@ class CreateItem extends Component {
         console.log("Error while uploading the file: ", err);
       });
 
-    // this method submits the form
-    // handleSubmit = e => {
-    //   e.preventDefault();
+    // // this method submits the form
+    // // handleSubmit = e => {
+    // //   e.preventDefault();
 
-    actions
-      .saveNewThing(this.state)
-      .then(res => {
-        console.log("added: ", res);
-        let copyOfAllImages = [...this.state.allImages];
-        copyOfAllImages.unshift(res);
-        this.setState({ allImages: copyOfAllImages });
-        // here you would redirect to some other page
-      })
-      .catch(err => {
-        console.log("Error while adding the thing: ", err);
-      });
+    // actions
+    //   .saveNewThing(this.state)
+    //   .then(res => {
+    //     console.log("added: ", res);
+    //     let copyOfAllImages = [...this.state.allImages];
+    //     copyOfAllImages.unshift(res);
+    //     this.setState({ allImages: copyOfAllImages });
+    //     // here you would redirect to some other page
+    //   })
+    //   .catch(err => {
+    //     console.log("Error while adding the thing: ", err);
+    //   });
   };
 
   render() {
@@ -120,10 +133,21 @@ class CreateItem extends Component {
           </select>
           <br />
           <br />
-          <Input type="file" onChange={e => this.handleFileUpload(e)} />
+          <Input
+            type="file"
+            onChange={e => this.handleFileUpload(e)}
+            // style={{
+            //   width: "300px",
+            //   height: "240px",
+            //   border: "1px solid lightgray",
+            //   display: "flex",
+            //   alignItems: "center",
+            //   justifyContent: "center"
+            // }}
+          ></Input>
           <br />
           <br />
-          <Button type="submit" size="large" onClick={this.onSubmit}>
+          <Button type="submit" size="large" onClick={this.handleSubmit}>
             Submit
           </Button>
         </Form>

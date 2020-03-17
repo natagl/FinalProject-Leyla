@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBar.css";
 import { NavLink } from "react-router-dom";
-import { Menu } from "antd/lib";
+// import { Menu } from "antd/lib";
 
 function NavBar(props) {
   return (

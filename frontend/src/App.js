@@ -11,6 +11,7 @@ import ShowItem from "./components/ShowItem";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import LandingPage from "./components/LandingPage";
 // import ImageUpload from "./components/imageUpload/imageUpload";
 
 class App extends Component {
@@ -37,6 +38,8 @@ class App extends Component {
         {/* <CreateItem /> */}
         <Switch>
           <Route exact path="/" render={props => <Home {...props} />} />
+          <Route exact path="/landing-page" render={props => <LandingPage {...props} />} />
+
           <Route
             exact
             path="/sign-up"

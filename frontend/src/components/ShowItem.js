@@ -22,10 +22,10 @@ class ShowItem extends Component {
       return (
         <div key={index}>
           {eachItem.title}
-          <ul key={index}>{eachItem.description}</ul>
-          <ul key={index}>{eachItem.type}</ul>
-          <ul key={index}>{eachItem.size}</ul>
-          <ul key={index}>{eachItem.img}</ul>
+          <ul>{eachItem.description}</ul>
+          <ul>{eachItem.type}</ul>
+          <ul>{eachItem.size}</ul>
+          <ul>{eachItem.img}</ul>
         </div>
       );
     });
