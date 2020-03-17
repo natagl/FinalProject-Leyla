@@ -5,7 +5,8 @@ const itemSchema = new Schema(
     imageUrl: String,
     title: String,
     description: String,
-    size: Number
+    size: String,
+    price: Number
   },
   {
     timestamps: true,

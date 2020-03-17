@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, Component } from "react";
 import actions from "../services/index";
 import { Typography, Button, Form, Input } from "antd";
 // import { Icon } from "react-icons-kit";
@@ -17,10 +17,11 @@ const Sizes = [
 
 class CreateItem extends Component {
   state = {
+    imageUrl: "",
     title: "",
     description: "",
+    price: "",
     size: "",
-    imageUrl: "",
     allImages: [] //initiali populated from DB
   };
 
@@ -44,6 +45,10 @@ class CreateItem extends Component {
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
+  // const [SizeValue, setSizeValue] = useState(1);
+
+  onSizeSelectChange = e => this.setState({ [e.target.name]: e.target.value });
 
   handleSubmit = async e => {
     e.preventDefault();
@@ -124,7 +129,8 @@ class CreateItem extends Component {
           <br />
           <br />
           <label>Size</label>
-          <select onChange={this.handleChange}>
+          <Input name="size" type="string" />
+          <select onChange={this.onSizeSelectChange}>
             {Sizes.map(item => (
               <option key={item.key} value={item.key}>
                 {item.value}
@@ -152,9 +158,9 @@ class CreateItem extends Component {
           </Button>
         </Form>
 
-        <h1>List of Images I have saved</h1>
+        {/* <h1>List of Images I have saved</h1>
 
-        {this.showImages()}
+        {this.showImages()} */}
       </div>
     );
   }

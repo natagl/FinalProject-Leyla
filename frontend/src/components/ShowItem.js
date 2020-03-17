@@ -23,7 +23,7 @@ class ShowItem extends Component {
         <div key={index}>
           {eachItem.title}
           <ul>{eachItem.description}</ul>
-          <ul>{eachItem.type}</ul>
+          <ul>{eachItem.price}</ul>
           <ul>{eachItem.size}</ul>
           <ul>{eachItem.img}</ul>
         </div>

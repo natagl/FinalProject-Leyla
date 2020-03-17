@@ -7,6 +7,7 @@ function NavBar(props) {
   return (
     <nav className="menu">
       <NavLink to="/">Home |</NavLink>
+      <NavLink to="/landing-page"> Landing Page|</NavLink>
 
       {props.email ? (
         <>
