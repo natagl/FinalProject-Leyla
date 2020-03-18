@@ -1,4 +1,4 @@
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 import actions from "../services/index";
 import { Typography, Button, Form, Input } from "antd";
 // import { Icon } from "react-icons-kit";
@@ -69,22 +69,7 @@ class CreateItem extends Component {
         console.log("Error while uploading the file: ", err);
       });
 
-    // // this method submits the form
-    // // handleSubmit = e => {
-    // //   e.preventDefault();
 
-    // actions
-    //   .saveNewThing(this.state)
-    //   .then(res => {
-    //     console.log("added: ", res);
-    //     let copyOfAllImages = [...this.state.allImages];
-    //     copyOfAllImages.unshift(res);
-    //     this.setState({ allImages: copyOfAllImages });
-    //     // here you would redirect to some other page
-    //   })
-    //   .catch(err => {
-    //     console.log("Error while adding the thing: ", err);
-    //   });
   };
 
   render() {
@@ -113,7 +98,7 @@ class CreateItem extends Component {
           <br />
           <br />
           <label>Size</label>
-          <Input name="size" type="string" />
+          {/* <Input name="size" type="string" /> */}
           <select onChange={this.onSizeSelectChange}>
             {Sizes.map(item => (
               <option name={item.value} key={item.key} value={item.key}>
@@ -134,9 +119,7 @@ class CreateItem extends Component {
           </Button>
         </Form>
 
-        {/* <h1>List of Images I have saved</h1>
-
-        {this.showImages()} */}
+  
       </div>
     );
   }

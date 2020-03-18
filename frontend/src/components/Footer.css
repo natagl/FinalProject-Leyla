@@ -1,11 +1,9 @@
+@import "~antd/dist/antd.css";
 
-
-.footerIcons {
-  
-  margin-left: 10px;
-  margin-right: 10px;
-  color: dimgray;
-}
-a {
-  color: dimgray;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }

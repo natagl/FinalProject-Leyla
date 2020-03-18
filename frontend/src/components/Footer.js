@@ -9,33 +9,33 @@ import { u00A9 } from "react-icons-kit/noto_emoji_regular/u00A9";
 
 function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <div>
         <p>
           <span className="footerIcons">
             <a>
-              <Icon type="copyright" size={25} icon={u00A9} />
+              <Icon type="copyright" size={25} icon={u00A9} style={{color:"gray"}}/>
             </a>{" "}
             2020 Glinska Inc.
           </span>
           <span className="footerIcons">
             <a>
-              <Icon type="instagram" size={25} icon={socialInstagram} />
+              <Icon type="instagram" size={25} icon={socialInstagram} style={{color:"gray"}} />
             </a>
           </span>
           <span className="footerIcons">
             <a>
-              <Icon type="instagram" size={25} icon={socialFacebook} />
+              <Icon type="instagram" size={25} icon={socialFacebook} style={{color:"gray"}} />
             </a>
           </span>
           <span className="footerIcons">
             <a>
-              <Icon type="twitter" size={25} icon={socialTwitter} />
+              <Icon type="twitter" size={25} icon={socialTwitter} style={{color:"gray"}}/>
             </a>
           </span>
           <span className="footerIcons">
             <a>
-              <Icon type="pinterest" size={25} icon={socialPinterest} />
+              <Icon type="pinterest" size={25} icon={socialPinterest} style={{color:"gray"}} />
             </a>
           </span>
         </p>

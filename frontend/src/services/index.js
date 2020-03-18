@@ -47,7 +47,10 @@ const actions = {
 
   getAllImages: async () => {
     return await service.get("/all-images");
-  }
+  },
+  // getSearch: async () => {
+  //   return await service.get("/all-images");
+  // }
 };
 
 export default actions;
