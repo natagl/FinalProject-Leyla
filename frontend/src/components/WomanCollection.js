@@ -23,6 +23,17 @@ class WomanCollection extends Component {
     });
   }
 
+  addToCart = item => {
+    this.props.addToCart(item);
+    let itemsImg = [...this.state.filterImages].filter(eachItem => {
+      return eachItem.title != item.title;
+    });
+    // this.setState({
+    //removes from woman collection
+    //   filterImages: itemsImg
+    //});
+  };
+
   showImages = () => {
     return this.state.filterImages.map((eachImage, index) => {
       return (
@@ -38,7 +49,11 @@ class WomanCollection extends Component {
             <ul className="card-text">{eachImage.size}</ul>
             <ul className="card-text">${eachImage.price}</ul>
             {/* <a href="/cart" className="btn"> */}
-            <Button className="item-add-button" type="submit">
+            <Button
+              className="item-add-button"
+              type="submit"
+              onClick={() => this.addToCart(eachImage)}
+            >
               Add to Cart
             </Button>
           </div>

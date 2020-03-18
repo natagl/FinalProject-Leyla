@@ -1,1 +1,14 @@
 @import "~antd/dist/antd.css";
+* {
+  box-sizing: border-box;
+}
+
+.item {
+  /* width: 200px;
+    height: 200px; */
+  margin: 50px auto;
+  padding-top: 75px;
+  background: #ccc;
+  text-align: center;
+  font-size: 3em;
+}

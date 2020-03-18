@@ -6,17 +6,18 @@ import SignUp from "./components/auth/SignUp";
 import LogIn from "./components/auth/LogIn";
 import Profile from "./components/profile/Profile";
 import actions from "./services/index";
-import CreateItem from "./components/CreateItem";
+//import CreateItem from "./components/CreateItem";
 import ShowItem from "./components/ShowItem";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import WomanCollection from "./components/WomanCollection";
-// import ImageUpload from "./components/imageUpload/imageUpload";
 import Cart from "./components/Cart";
 
 class App extends Component {
-  state = {};
+  state = {
+    cartItem: []
+  };
 
   async componentDidMount() {
     let user = await actions.isLoggedIn();
@@ -31,6 +32,14 @@ class App extends Component {
     this.setUser({ email: null, createdAt: null, updatedAt: null, _id: null }); //FIX
   };
 
+  addToCart = item => {
+    let cartItem = [...this.state.cartItem];
+    cartItem.push(item);
+    this.setState({
+      cartItem
+    });
+  };
+
   render() {
     return (
       <BrowserRouter>
@@ -42,7 +51,9 @@ class App extends Component {
           <Route
             exact
             path="/woman-collection"
-            render={props => <WomanCollection {...props} />}
+            render={props => (
+              <WomanCollection {...props} addToCart={this.addToCart} />
+            )}
           />
 
           <Route
@@ -68,7 +79,7 @@ class App extends Component {
           <Route
             exact
             path="/cart"
-            render={props => <Cart {...props} user={this.state} />}
+            render={props => <Cart {...props} user={this.state}  />}
           />
 
           <Route component={NotFound} />

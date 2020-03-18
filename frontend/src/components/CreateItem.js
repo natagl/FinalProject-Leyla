@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import actions from "../services/index";
 import { Typography, Button, Form, Input } from "antd";
-// import { Icon } from "react-icons-kit";
-// import { plusCircle } from "react-icons-kit/fa/plusCircle";
+
 
 const { Title } = Typography;
 const { TextArea } = Input;
@@ -27,7 +26,6 @@ class CreateItem extends Component {
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
-  // const [SizeValue, setSizeValue] = useState(1);
 
   onSizeSelectChange = e => {
     console.log(e.target.name, e.target.value);
