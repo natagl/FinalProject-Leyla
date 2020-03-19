@@ -18,7 +18,7 @@ function NavBar(props) {
       </div>
       <div className="navLinks">
         <NavLink to="/" style={{ color: "gray" }}>
-          Home 
+         |  Home  | 
         </NavLink>
         <NavLink to="/woman-collection" style={{ color: "gray" }}>
           {" "}
