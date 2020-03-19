@@ -11,3 +11,21 @@
   margin-bottom: 10px;
   background-color: salmon;
 }
+
+.footerBtn2 {
+  color: white;
+  background-color: black;
+}
+
+.footerBtn1 {
+  color: black;
+  background-color: white;
+}
+
+.cartFooter {
+  border: 1px black;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between;
+}

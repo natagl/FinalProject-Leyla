@@ -23,18 +23,51 @@
 }
 
 .item-add-button {
-  background-color: ghostwhite;
-  box-shadow: 0 0 2px 0px black;
-  margin-bottom: 15px;
+  font-size: 14px;
+    letter-spacing: .2px;
+    font-stretch: condensed;
+    font-weight: 700;
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px;
+    outline: 0;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
 }
 .item1 {
   margin-top: 100px;
-  background-size: cover;
 }
 
-.item2 {
-  background-size: cover;
+.card :hover .imageCard {
+  opacity: 0.3;
 }
-.item3 {
-  background-size: cover;
+
+.card-body {
+  border: 0.5px solid #ccc;
+  display: none;
+  font-size: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  font-family: "Open Sans", serif;
+  font-size: 14px;
+  text-align: center;
+
+}
+
+.card:hover .card-body {
+  display: block;
+}
+
+.card-text1 {
+  font-weight: bold;
+}
+.card-text4 {
+  font-weight: bold;
 }

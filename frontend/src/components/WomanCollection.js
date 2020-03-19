@@ -44,10 +44,10 @@ class WomanCollection extends Component {
             alt="Card image cap"
           />
           <div className="card-body">
-            <ul className="card-text">{eachImage.title}</ul>
-            <ul className="card-text">{eachImage.description}</ul>
-            <ul className="card-text">Size: {eachImage.size}</ul>
-            <ul className="card-text">${eachImage.price}</ul>
+            <ul className="card-text1">{eachImage.title}</ul>
+            <ul className="card-text2">{eachImage.description}</ul>
+            <ul className="card-text3">Size: {eachImage.size}</ul>
+            <ul className="card-text4">${eachImage.price}</ul>
             {/* <a href="/cart" className="btn"> */}
             <button
               className="item-add-button"

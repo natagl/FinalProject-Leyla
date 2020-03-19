@@ -14,28 +14,53 @@ function Footer() {
         <p>
           <span className="footerIcons">
             <a>
-              <Icon type="copyright" size={25} icon={u00A9} style={{color:"gray"}}/>
+              <Icon
+                type="copyright"
+                size={15}
+                icon={u00A9}
+                style={{ color: "gray" }}
+              />
             </a>{" "}
             2020 Glinska Inc.
           </span>
           <span className="footerIcons">
             <a>
-              <Icon type="instagram" size={25} icon={socialInstagram} style={{color:"gray"}} />
+              <Icon
+                type="instagram"
+                size={15}
+                icon={socialInstagram}
+                style={{ color: "gray" }}
+              />
             </a>
           </span>
           <span className="footerIcons">
             <a>
-              <Icon type="instagram" size={25} icon={socialFacebook} style={{color:"gray"}} />
+              <Icon
+                type="instagram"
+                size={15}
+                icon={socialFacebook}
+                style={{ color: "gray" }}
+              />
             </a>
           </span>
           <span className="footerIcons">
             <a>
-              <Icon type="twitter" size={25} icon={socialTwitter} style={{color:"gray"}}/>
+              <Icon
+                type="twitter"
+                size={15}
+                icon={socialTwitter}
+                style={{ color: "gray" }}
+              />
             </a>
           </span>
           <span className="footerIcons">
             <a>
-              <Icon type="pinterest" size={25} icon={socialPinterest} style={{color:"gray"}} />
+              <Icon
+                type="pinterest"
+                size={15}
+                icon={socialPinterest}
+                style={{ color: "gray" }}
+              />
             </a>
           </span>
         </p>
