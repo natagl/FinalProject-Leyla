@@ -1,9 +1,13 @@
 @import "~antd/dist/antd.css";
 
 .footer {
+  border: cornflowerblue;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
+  background-color: white;
+  margin-top: 50px;
+  padding-top: 20px;
 }

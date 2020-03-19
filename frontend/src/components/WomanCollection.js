@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import actions from "../services";
-import { Button, Card } from "antd/lib";
+import { Card } from "antd/lib";
 import "./LandingPage.css";
 import SearchFeature from "./SearchFeature";
 
@@ -46,16 +46,16 @@ class WomanCollection extends Component {
           <div className="card-body">
             <ul className="card-text">{eachImage.title}</ul>
             <ul className="card-text">{eachImage.description}</ul>
-            <ul className="card-text">{eachImage.size}</ul>
+            <ul className="card-text">Size: {eachImage.size}</ul>
             <ul className="card-text">${eachImage.price}</ul>
             {/* <a href="/cart" className="btn"> */}
-            <Button
+            <button
               className="item-add-button"
               type="submit"
               onClick={() => this.addToCart(eachImage)}
             >
               Add to Cart
-            </Button>
+            </button>
           </div>
         </div>
       );

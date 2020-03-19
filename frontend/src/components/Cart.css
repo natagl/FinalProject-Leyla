@@ -1,0 +1,13 @@
+.cartImg {
+  margin-top: 10px;
+  width: 150px;
+}
+.cartBody {
+  border: 0.2px solid lightslategray;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 1px 0px black;
+}
+.cart-button {
+  margin-bottom: 10px;
+  background-color: salmon;
+}

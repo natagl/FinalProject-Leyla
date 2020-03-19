@@ -1,9 +1,11 @@
 .card {
-  border: 0.2px solid lightslategray;
-  flex-wrap: wrap;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 0.8px solid #dddddd;
 
-  box-shadow: 0 0 1px 0px black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-shadow: inset 0 0 1px black;
   flex: 4;
 }
 
@@ -13,12 +15,26 @@
   height: 300px;
 }
 
-.btn {
-  color: white;
-  background-color: gray;
-}
 .eachCard {
-  text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.item-add-button {
+  background-color: ghostwhite;
+  box-shadow: 0 0 2px 0px black;
+  margin-bottom: 15px;
+}
+.item1 {
+  margin-top: 100px;
+  background-size: cover;
+}
+
+.item2 {
+  background-size: cover;
+}
+.item3 {
+  background-size: cover;
 }
