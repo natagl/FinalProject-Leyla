@@ -1,40 +1,26 @@
 * {
   box-sizing: border-box;
 }
+
+
 .homePage {
   /* background-image: url("/images/backgound.jpg"); */
 }
-/* .item {
-  /* width: 200px;
-    height: 200px; */
-/* margin: 50px auto;
-  padding-top: 75px;
-  background: #ccc;
-  text-align: center;
-  font-size: 3em;
-} */
-*/ [aos="fade"] {
-  opacity: 0;
-  transition-property: opacity;
-}
-
-[aos="fade"].aos-animate {
-  opacity: 1;
-}
 
 .homePage {
-  max-width: 1100px;
+  /* max-width: 1100px; */
   margin: 0;
   padding: 0;
   overflow: auto;
   padding: 0 2rem;
+  /* margin-left: 400px; */
+  width: 100%;
 }
 
 .centered {
   position: absolute;
-
-  top: 50%;
-  left: 45%;
+  top: 55%;
+  left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   color: white;
@@ -45,6 +31,21 @@
   /* border-radius: 5px; */
   text-align: center;
   background-color: transparent;
-  font-family: NeueHelveticaforZara-BoldCn;
-  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
 }
+
+.centered:hover {
+  color: white;
+  background-color: black;
+}
+@media all and (max-width: 30em) {
+   .creatBtn {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+h3 {
+  color: white;
+}
+

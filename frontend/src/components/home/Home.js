@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import "./Home.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const Home = (props) => {
+const Home = props => {
   AOS.init({
     offset: 400, // offset (in px) from the original trigger point
     delay: 0, // values from 0 to 3000, with step 50ms
@@ -15,12 +15,13 @@ const Home = (props) => {
   return (
     <div className="homePage">
       <div className="item1" data-aos="fade-right">
-        <img src="images/3.jpg" className="pics"></img>
+        <img src="images/3.jpg" className="pics">
+        </img>
         <button
           className="centered"
           onClick={() => props.history.push("/woman-collection")}
         >
-          NEW IN
+          VIEW
         </button>
       </div>
       <div className="item2" data-aos="fade-left">

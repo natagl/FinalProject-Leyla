@@ -23,7 +23,12 @@ class Cart extends Component {
             >
               CHECKOUT
             </button>
-            <button className="footerBtn2">CONTINUE</button>
+            <button
+              onClick={() => this.props.history.push("/woman-collection")}
+              className="footerBtn2"
+            >
+              CONTINUE
+            </button>
           </footer>
         </div>
       );
