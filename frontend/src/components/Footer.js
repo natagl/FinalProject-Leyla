@@ -7,7 +7,7 @@ import { socialPinterest } from "react-icons-kit/typicons/socialPinterest";
 import { socialFacebook } from "react-icons-kit/ionicons/socialFacebook";
 import { u00A9 } from "react-icons-kit/noto_emoji_regular/u00A9";
 
-function Footer() {
+function Footer(props) {
   return (
     <footer className="footer">
       <div>
@@ -23,8 +23,8 @@ function Footer() {
             </a>{" "}
             2020 Glinska Inc.
           </span>
-          <span className="footerIcons">
-            <a>
+          <span>
+            <a href="">
               <Icon
                 type="instagram"
                 size={15}
@@ -34,7 +34,7 @@ function Footer() {
             </a>
           </span>
           <span className="footerIcons">
-            <a>
+            <a href="https://www.instagram.com/lesya_dzurban_design/">
               <Icon
                 type="instagram"
                 size={15}

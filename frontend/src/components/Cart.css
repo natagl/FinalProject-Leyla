@@ -9,23 +9,29 @@
 }
 .cart-button {
   margin-bottom: 10px;
-  background-color: salmon;
+  background-color: lightcoral;
+  width: 200px;
 }
 
 .footerBtn2 {
+  margin-top: 50px;
   color: white;
   background-color: black;
+  margin-left: 10px;
 }
 
 .footerBtn1 {
+  margin-top: 50px;
   color: black;
   background-color: white;
+  margin-right: 10px;
 }
 
 .cartFooter {
+  direction: flex;
+  margin-top: 80px;
   border: 1px black;
   left: 0;
   bottom: 0;
   width: 100%;
-  justify-content: space-between;
 }

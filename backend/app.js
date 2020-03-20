@@ -13,6 +13,8 @@ const passport = require("./config/passport");
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/shop";
 console.log("Connecting DB to ", MONGODB_URI);
 
+// mongodb+srv://natagl:28262521@cluster0-vtqvq.mongodb.net/test?retryWrites=true&w=majority
+
 mongoose
   .connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(x =>

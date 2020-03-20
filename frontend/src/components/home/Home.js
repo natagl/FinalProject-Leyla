@@ -15,8 +15,7 @@ const Home = props => {
   return (
     <div className="homePage">
       <div className="item1" data-aos="fade-right">
-        <img src="images/3.jpg" className="pics">
-        </img>
+        <img src="images/3.jpg" className="pics"></img>
         <button
           className="centered"
           onClick={() => props.history.push("/woman-collection")}
@@ -25,7 +24,7 @@ const Home = props => {
         </button>
       </div>
       <div className="item2" data-aos="fade-left">
-        <img src="images/1.jpg" className="pics"></img>
+        <img src="images/1.jpg" className="pics" />
       </div>
       <div className="item3" data-aos="fade-right">
         <img src="images/2.jpg" className="pics" />
