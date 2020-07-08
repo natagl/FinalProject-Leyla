@@ -1,4 +1,4 @@
-# LEYLA -Online Fashion store app for Women’s clothing 👗
+# Online Fashion Store App for Women’s Clothing 👗
 MERN App  
 
 ![homePage](frontend/public/images/homePage.jpg)
