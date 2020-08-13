@@ -1,5 +1,6 @@
 # Online Fashion Store App for Women’s Clothing 👗
 MERN App  
+Fashion store app for Women’s clothing hand stitched by a talented Ukrainian designer.
 
 ![homePage](frontend/public/images/homePage.jpg)
 
